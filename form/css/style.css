@@ -1,0 +1,267 @@
+:root {
+    --primary-color: #e63946;
+    --secondary-color: #f1faee;
+}
+
+/*  Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(40deg , #a8dadc 10%, #457b9d 60%, #1d3557)
+}
+
+
+label, input {
+    display: block;
+}
+
+label:not(:first-of-type) {
+    padding: 10px 0;
+}
+label:first-of-type {
+    margin-bottom: 10px;
+}
+
+input:not([type='submit'], [type='button']) {
+    outline: none;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    padding: 8px 16px;
+    box-shadow: inset 0px 0px var(--primary-color);
+    transition: box-shadow 0.3s ease-in;   
+
+}
+input:focus:not([type='button']) 
+ {
+    box-shadow: inset 225px 0px var(--primary-color);
+    border-radius: inset 0;
+}
+
+/* Title */
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Sign in */
+
+.primari_form {
+    background-color: var(--primary-color);
+    width: 80vw;
+    height: 45vh;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.primari_form-signin{
+    width: 40vw;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px 0px 0px 4px;
+    transition: all 0.5s ease-in;
+}
+
+.mv-right{
+    margin-left: 0px;
+    transition: all .3s ease;
+}
+
+.primari_form-signin input[type='submit']{
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    border-radius: 5px;
+    margin: 30px auto 0 auto;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Sign Up Button */
+
+.primari_form_btn_signup {
+    display: flex;
+    width: 40vw;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.primari_form_btn_signup button {
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background-color: var(--secondary-color);
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Sing Up */
+
+.survey-form-signup {
+    margin: 0;
+    width: 0vw;
+    position: relative;
+    background-color: var(--secondary-color);
+    overflow: hidden;
+    border-radius: 0px 4px 4px 0px;
+    transition: all 0.5s ease-in;
+}
+
+.mv-left{
+    margin-left: -1600px;
+    transition: all .6s ease;
+}
+
+#survey-form {
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.survey-form-signup-content {
+    background-color: var(--secondary-color);
+    height: 45vh;
+    width: 48vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+}
+
+.survey-form-signup_btn input[type='submit']{
+    padding: 10px 40px;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Buttons Back and  Next */
+
+.next,
+.back {
+    border: 0;
+    background: transparent;
+    position: absolute;
+}
+.next{
+    margin-top: 40vh;
+    margin-left: 95%;
+    transform: translate(-50%) rotate(90deg);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .3s ease;
+    color: var(--primary-color);
+
+}
+
+.next::after {
+    content: ' >';
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
+    padding-left: 5px;
+}
+.next:hover {
+    padding-right: 30px;
+}
+
+.next:hover::after {
+    padding-left: 10px;
+    opacity: 1;
+}
+
+.back{
+    margin-top: 5%;
+    margin-left: 95%;
+    transform: translate(-50%) rotate(-90deg);
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all .3s ease;
+    color: var(--primary-color);
+    visibility: hidden;
+
+}
+
+
+.back::after {
+    content: ' >';
+    position: absolute;
+    opacity: 0;
+    transition: all .3s ease;
+    padding-left: 5px;
+}
+.back:hover {
+    padding-right: 30px;
+}
+
+.back:hover::after {
+    padding-left: 10px;
+    opacity: 1;
+}
+
+
+/*  CheckBox */
+
+.checkbox {
+    display: flex;
+    justify-content: space-around;
+}
+
+.survey-form-signup-parttwo {
+
+}
+.survey-form-signup-parttwo select {
+    padding: 6px 30px;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+/*  */
+
+.survey-form-signup-partthree input {
+    padding: 10px 40px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    background-color: var(--primary-color);
+    border: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    border-radius: 5px;
+    cursor: pointer;
+
+}
