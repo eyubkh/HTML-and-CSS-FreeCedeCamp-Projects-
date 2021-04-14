@@ -38,71 +38,25 @@ html {
     z-index: 9999;
 }
 
-/* #cursor2 {
-    width: 100px;
-    height: 100px;
-    border: solid 1px black;
+#cursor2 {
+    width: 0px;
+    height: 0px;
+    border: solid 2px black;
     border-radius: 50%;
     position: fixed;
     transform: translateY(-50%) translateX(-50%);
     pointer-events: none;
     z-index: 9998;
-} */
-
-
-/******* Menu *******/
-#menu {
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100;
-}
-
-#menu .menu-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 108px;
-    height: 108px;
-    /* filter: blur(20px); */
-    background-color: whitesmoke;
-    border-radius: 0 0 100% 0 / 0 0 100% 0;
-    animation: menu 10s infinite linear;
-    transition: all 0.4s ease-in;
-    box-shadow: 0 0 10px #fff;
+    transition: width .3s ease,
+                height .3s ease;
 
 }
 
-@keyframes menu {
-    0%,
-    100% {
-        border-radius: 0 0 100% 0 / 0 0 100% 0;
-    }
-
-    15% {
-        border-radius: 0 0 92% 0 / 0 0 99% 0;
-    }
-
-    30% {
-        border-radius: 0 0 97% 0 / 0 0 90% 0;
-    }
-
-    45% {
-        border-radius: 0 0 91% 0 / 0 0 98% 0;
-    }
-
-    55% {
-        border-radius: 0 0 99% 0 / 0 0 91% 0;
-    }
-
-    70% {
-        border-radius: 0 0 89% 0 / 0 0 97% 0;
-    }
-
-    85% {
-        border-radius: 0 0 97% 0 / 0 0 94% 0;
-    }
+#cont1:hover + #cursor2 {
+    width: 100px;
+    height: 100px;
 }
+
 
 /* Bars */
 
@@ -114,7 +68,7 @@ html {
     top: 0;
     left: 0;
     border-radius: 0 0 100% 0 / 0 0 100% 0;
-    z-index: 1;
+    z-index: 100;
 
 }
 
@@ -271,7 +225,14 @@ html {
     width: 100%;
     text-align: center;
     padding: 30px 0;
-    text-transform: uppercase;
+}
+.two h1 a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color .3s ease;
+}
+
+.two h1 a:hover {
     color: black;
 }
 
@@ -288,7 +249,11 @@ html {
     z-index: -1;
     width: 300px;
     height: 200px;
-    
+    transform-origin: center center;
+    transition: left .3s ease-out,
+                top .3s ease-out,
+                transform 800ms ease-out,
+                opacity .3s ease;
 }
 
 #img1 {
